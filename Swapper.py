@@ -258,7 +258,7 @@ class Swapper:
 
     def stop(self):
         check = self.r.get(f"https://www.instagram.com/{self.target}/?__a=1")
-        if check.status_code != 404 and check.text != '{}':
+        if check.status_code != 404 and self.claimed:
             print(f'\n[{green}+{reset}] Successfully Swapped >> @{self.target} | Method #{self.method}')
             self.disc()
             ctypes.windll.user32.MessageBoxW(0, f'Successfully Swapped : @{self.target} | Attempts: {self.attempts}', 'Ulzi Swapper', 0)
