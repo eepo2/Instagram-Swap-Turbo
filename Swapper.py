@@ -18,20 +18,6 @@ except:
     from discord import Webhook, RequestsWebhookAdapter
     from colorama import Fore , init
     from threading import Lock
-
-
-lock = Lock()
-init(autoreset=True)
-magenta = Fore.LIGHTMAGENTA_EX
-green = Fore.LIGHTGREEN_EX
-blue = Fore.CYAN
-red = Fore.LIGHTRED_EX
-reset = Fore.RESET
-yellow = Fore.YELLOW
-magenta = Fore.LIGHTMAGENTA_EX
-l = Fore.WHITE
-reset = Fore.RESET
-END = '\033[0m'
 if sys.version_info.major == 3:
     import urllib.parse
 
@@ -353,6 +339,18 @@ class Swapper:
             
 
 if __name__ == "__main__":
+    lock = Lock()
+    init(autoreset=True)
+    magenta = Fore.LIGHTMAGENTA_EX
+    green = Fore.LIGHTGREEN_EX
+    blue = Fore.CYAN
+    red = Fore.LIGHTRED_EX
+    reset = Fore.RESET
+    yellow = Fore.YELLOW
+    magenta = Fore.LIGHTMAGENTA_EX
+    l = Fore.WHITE
+    reset = Fore.RESET
+    END = '\033[0m'
     threads = []
     m = Swapper('','')
     while not m.isloggedin:
